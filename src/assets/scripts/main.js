@@ -3,6 +3,8 @@
  * see commented examples below
  */
 
+import Swiper from 'swiper';
+
 // import 'some-node-module';
 // import SomeModule from 'some-node-module';
 
@@ -14,3 +16,4 @@
   const university = "UOC";
   console.log(`Hello, ${university}!`);
 } )();
+
