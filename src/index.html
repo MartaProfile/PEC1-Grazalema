@@ -1,32 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <link rel="stylesheet" href="./assets/styles/main.scss"><!-- do not remove this line! -->
     <title>UOC Boilerplate</title>
   </head>
   <body>
 
-    <header>
-      <h1>SIERRA DE GRAZALEMA</h1>
-      <nav>
-        <ul>
-          <li><a href="#historia">Historia</a></li>
-          <li><a href="#lugares">Lugares de interés</a></li>
-          <li><a href="#galeria">Galería</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
+    <include src="./views/header.html"></include>
 
-    <section id="historia">
-      <h2>Historia de la Sierra de Grazalema</h2>
-      <p>La Sierra de Grazalema, situada en el corazón de Andalucía, es un enclave de gran valor histórico y natural. Desde tiempos prehistóricos, 
+    <section class="section section--fixed" id="historia">
+      <h2 class="section__title">Historia de la Sierra de Grazalema</h2>
+      <p class="section__text">La Sierra de Grazalema, situada en el corazón de Andalucía, es un enclave de gran valor histórico y natural. Desde tiempos prehistóricos, 
         esta zona ha sido habitada por distintas civilizaciones que han dejado su huella en sus paisajes y monumentos. 
         Las primeras evidencias de asentamientos humanos se remontan a la época prehistórica, con restos de neandertales en cuevas como la Cueva de la Pileta.</p>
-      <p>Durante la dominación romana, la sierra fue parte del Imperio y se construyeron importantes vías de comunicación que atravesaban la comarca. 
+      <p class="section__text">Durante la dominación romana, la sierra fue parte del Imperio y se construyeron importantes vías de comunicación que atravesaban la comarca. 
         En la Edad Media, la región pasó a formar parte del Reino de Sevilla tras la conquista cristiana, aunque mantuvo una importante presencia morisca 
         hasta el siglo XV, cuando fue definitivamente integrada en la corona de Castilla.</p>
       <p>En la actualidad, la Sierra de Grazalema es conocida por su impresionante patrimonio natural, destacando como uno de los parques naturales más antiguos de 
@@ -34,119 +24,263 @@
         caminos y monumentos.</p>    
     </section>
 
-    <section id="lugares">
+    <section class="section" id="lugares">
 
-      <h2>Lugares de interés</h2>
+      <h2 class="section__title">Lugares de interés</h2>
 
-      <article>
-        <h3>Parque Natural Sierra de Grazalema</h3>
-        <img src="./assets/images/sierra-Grazalema.jpeg" alt="Paisaje en la Sierra de Grazalema">
-        <p>El Parque Natural de la Sierra de Grazalema es una joya natural ubicada en la provincia de Cádiz y parte de la de Málaga. 
-          Declarado Reserva de la Biosfera en 1977 por la UNESCO, es un espacio que destaca por sus profundos valles, montañas y la biodiversidad que alberga. 
-          Es hogar de especies como el pinsapo, un abeto endémico, y el buitre leonado. Ofrece rutas de senderismo impresionantes, como la Garganta Verde 
-          y la subida al pico El Torreón, el punto más alto de la provincia de Cádiz.</p>
+      <article class="article">
+        
+        <div class="article__image">
+          <img src="./assets/images/sierra-grazalema.jpg" alt="Paisaje en la Sierra de Grazalema">
+        </div>
+
+        <div class="article__content">
+          <h3>Parque Natural Sierra de Grazalema</h3>
+          <p>El Parque Natural de la Sierra de Grazalema es una joya natural ubicada en la provincia de Cádiz y parte de la de Málaga. 
+            Declarado Reserva de la Biosfera en 1977 por la UNESCO, es un espacio que destaca por sus profundos valles, montañas y la biodiversidad que alberga. 
+            Es hogar de especies como el pinsapo, un abeto endémico, y el buitre leonado. Ofrece rutas de senderismo impresionantes, como la Garganta Verde 
+            y la subida al pico El Torreón, el punto más alto de la provincia de Cádiz.</p>
+        </div>
       </article>
 
-      <article>
-        <h3>Garganta Verde</h3>
-        <img src="./assets/images/garganta verde.jpg" alt="Garganta Verde">
-        <p>La Garganta Verde es uno de los cañones más espectaculares de Andalucía, ubicado en el Parque Natural de la Sierra de Grazalema. 
-          Este profundo desfiladero de más de 400 metros de altura ofrece una de las rutas de senderismo más impresionantes de la comarca. 
-          La flora que lo rodea es de gran interés, y su fauna incluye el avistamiento de colonias de buitres leonados. La ruta tiene una dificultad moderada, 
-          pero recompensa con vistas panorámicas y una experiencia inolvidable en la naturaleza.</p>
+
+      <article class="article">
+
+        <div class="article__image">
+          <img src="./assets/images/garganta verde.jpg" alt="Garganta Verde">
+        </div>
+
+        <div class="article__content">
+          <h3>Garganta Verde</h3>
+          <p>La Garganta Verde es uno de los cañones más espectaculares de Andalucía, ubicado en el Parque Natural de la Sierra de Grazalema. 
+            Este profundo desfiladero de más de 400 metros de altura ofrece una de las rutas de senderismo más impresionantes de la comarca. 
+            La flora que lo rodea es de gran interés, y su fauna incluye el avistamiento de colonias de buitres leonados. La ruta tiene una dificultad moderada, 
+            pero recompensa con vistas panorámicas y una experiencia inolvidable en la naturaleza.</p>
+        </div>
+
       </article>
 
-      <article>
-        <h3>Cueva de la Pileta</h3>
-        <img src="./assets/images/cueva-Pileta.jpg" alt="Cueva de la Pileta">
-        <p>La Cueva de la Pileta, situada cerca de Benaoján, es un importante yacimiento arqueológico conocido por sus pinturas rupestres paleolíticas.
-          Estas cuevas fueron habitadas por nuestros ancestros hace más de 30,000 años y contienen arte rupestre en perfecto estado de conservación. 
-          Dentro de la cueva, se pueden apreciar figuras de caballos, ciervos, peces y símbolos geométricos que revelan la creatividad y 
-          cultura de los habitantes prehistóricos de la zona. Es un lugar imprescindible para quienes desean conocer la historia más remota de la Sierra de Grazalema.</p>
+
+      <article class="article">
+
+        <div class="article__image">
+          <img src="./assets/images/cueva-pileta.jpg" alt="Cueva de la Pileta">
+        </div>
+
+        <div class="article__content">
+          <h3>Cueva de la Pileta</h3>
+          <p>La Cueva de la Pileta, situada cerca de Benaoján, es un importante yacimiento arqueológico conocido por sus pinturas rupestres paleolíticas.
+            Estas cuevas fueron habitadas por nuestros ancestros hace más de 30,000 años y contienen arte rupestre en perfecto estado de conservación. 
+            Dentro de la cueva, se pueden apreciar figuras de caballos, ciervos, peces y símbolos geométricos que revelan la creatividad y 
+            cultura de los habitantes prehistóricos de la zona. Es un lugar imprescindible para quienes desean conocer la historia más remota de la Sierra de Grazalema.</p>
+        </div>
+
       </article>
 
-      <article>
-        <h3>Pueblo de Grazalema</h3>
-        <img src="./assets/images/pueblo-Grzalema.jpeg" alt="Pueblo de Grazalema">
-        <p>El pueblo de Grazalema es conocido por ser uno de los más hermosos de la Ruta de los Pueblos Blancos. Con sus calles estrechas y empedradas, 
-          y sus casas de fachadas blancas adornadas con flores, es un destino perfecto para quienes buscan una inmersión en la tradición andaluza. 
-          El pueblo también cuenta con una oferta gastronómica destacada, famosa por sus quesos de cabra y oveja, además de platos tradicionales como
-          la sopa de Grazalema. Pasear por Grazalema es descubrir la esencia de la Sierra.</p>
+
+      <article class="article">
+
+        <div class="article__image">
+          <img src="./assets/images/pueblo-grazalema.jpg" alt="Pueblo de Grazalema">
+        </div>
+
+        <div class="article__content">
+          <h3>Pueblo de Grazalema</h3>
+          <p>El pueblo de Grazalema es conocido por ser uno de los más hermosos de la Ruta de los Pueblos Blancos. Con sus calles estrechas y empedradas, 
+            y sus casas de fachadas blancas adornadas con flores, es un destino perfecto para quienes buscan una inmersión en la tradición andaluza. 
+            El pueblo también cuenta con una oferta gastronómica destacada, famosa por sus quesos de cabra y oveja, además de platos tradicionales como
+            la sopa de Grazalema. Pasear por Grazalema es descubrir la esencia de la Sierra.</p>
+        </div>
+
       </article>
 
-      <article>
-        <h3>Ruta de Senderismo El Torreón</h3>
-        <img src="./assets/images/ruta-3.jpg" alt="Ruta de senderismo El Torreón">
-        <p>La ruta hacia El Torreón, el pico más alto de la Sierra de Grazalema, es una de las más desafiantes y gratificantes para los amantes del senderismo. 
-          Con sus 1.654 metros de altura, esta cumbre ofrece unas vistas impresionantes que abarcan desde las montañas de Cádiz hasta las costas del Mediterráneo 
-          en días despejados. La ruta tiene una dificultad moderada a alta debido a su inclinación, pero el esfuerzo vale la pena al llegar a la cima y disfrutar 
-          del paisaje. Ideal para excursionistas experimentados que buscan una aventura inolvidable.</p>
-      </article>
 
-      <article>
-        <h3>Deportes de Aventura</h3>
-        <img>
-        <p>La Sierra de Grazalema es un paraíso para los amantes de los deportes de aventura. Desde escalada en roca en sus formaciones calizas hasta espeleología 
-          en cuevas como la Cueva del Gato, las opciones son diversas y emocionantes. Los aventureros también pueden disfrutar de experiencias únicas como el parapente, 
-          lanzándose desde los altos picos de la sierra y disfrutando de vistas aéreas espectaculares de la comarca. 
-          Sin duda, un destino ideal para quienes buscan adrenalina en medio de la naturaleza.</p>
+      <article class="article">
 
-          <h4>Escalada</h4>
-          <img src="./assets/images/escalada-2.jpg" alt="Rutas e Escalada">
-          <p>La sierra es conocida por sus impresionantes formaciones rocosas, perfectas para la escalada. 
-            Las paredes de roca caliza ofrecen rutas para todos los niveles, desde principiantes hasta escaladores experimentados.</p>
-          <p><strong>Proveedor:</strong> <a href="https://www.grazalemaaventura.com" target="_blank">Grazalema Aventura</a></p>
-      
-          <h4>Barranquismo</h4>
-          <img src="./assets/images/barranquismo-2.jpg" alt="Barranquismo">
-          <img src="./assets/images/barranquismo-3.jpg" alt="Barranquismo">
-          <p>Las gargantas y ríos de la Sierra de Grazalema son ideales para la práctica del barranquismo. Descenderás por cañones y 
-            saltarás en cascadas naturales, disfrutando de una experiencia llena de adrenalina.</p>
-          <p><strong>Proveedor:</strong> <a href="https://www.horizonnature.com" target="_blank">Horizon Nature</a>, que ofrece rutas guiadas por la famosa Garganta Verde.</p>
-      
-          <h4>Espeleología</h4>
-          <img src="./assets/images/" alt="Espeleología">
-          <p>Explora las profundidades de la tierra en la Sierra de Grazalema con actividades de espeleología. 
-            Lugares como la Cueva del Gato o la Cueva de la Pileta ofrecen experiencias inolvidables en sus cuevas llenas de estalactitas y estalagmitas.</p>
-          <p><strong>Proveedor:</strong> <a href="https://www.barranquismoaventura.com" target="_blank">Barranquismo Aventura</a></p>
-      
-          <h4>Kayak</h4>
-          <img src="./assets/images/espeleo-2.jpg" alt="Espeleología">
-          <p>Practica kayak en los embalses de la comarca, como el de Zahara-El Gastor, y disfruta de las vistas a la sierra mientras navegas por 
-            sus aguas cristalinas rodeado de naturaleza.</p>
-          <p><strong>Proveedor:</strong> <a href="https://www.genatur.com" target="_blank">Genatur</a>, organizan salidas en kayak en los embalses de la 
-          Sierra de Grazalema.</p>
+        <div class="article__image">
+          <img src="./assets/images/ruta-3.jpg" alt="Ruta de senderismo El Torreón">
+        </div>
+
+        <div class="article__content">
+          <h3>Ruta de Senderismo El Torreón</h3>
+          <p>La ruta hacia El Torreón, el pico más alto de la Sierra de Grazalema, es una de las más desafiantes y gratificantes para los amantes del senderismo. 
+            Con sus 1.654 metros de altura, esta cumbre ofrece unas vistas impresionantes que abarcan desde las montañas de Cádiz hasta las costas del Mediterráneo 
+            en días despejados. La ruta tiene una dificultad moderada a alta debido a su inclinación, pero el esfuerzo vale la pena al llegar a la cima y disfrutar 
+            del paisaje. Ideal para excursionistas experimentados que buscan una aventura inolvidable.</p>
+        </div>
 
       </article>
 
     </section>
 
-    <section id="galeria">
-      <h2>Galería de imágenes</h2>
-      <div class="gallery">
-        <img>
-        <img>
-        <img>
+
+    <section class="section" id="deportes">
+
+      <h2 class="section__title">Deportes de Aventura</h2>
+
+      <p class="section__text">La Sierra de Grazalema es un paraíso para los amantes de los deportes de aventura. Desde escalada en roca en sus formaciones calizas hasta espeleología 
+        en cuevas como la Cueva del Gato, las opciones son diversas y emocionantes. Los aventureros también pueden disfrutar de experiencias únicas como el parapente, 
+        lanzándose desde los altos picos de la sierra y disfrutando de vistas aéreas espectaculares de la comarca. 
+        Sin duda, un destino ideal para quienes buscan adrenalina en medio de la naturaleza.</p>
+
+      <article class="deportes">
+
+        <div class="deporte">
+          <img class="deporte__image deporte__image--brillo" src="./assets/images/escalada-1.jpg" alt="Rutas e Escalada">
+          
+          <h3 class="deporte__title deporte__title--color">Escalada</h3>
+
+          <p class="deporte__text deporte__text--opacidad">La sierra es conocida por sus impresionantes formaciones rocosas...
+            perfectas para la escalada. Las paredes de roca caliza ofrecen rutas para todos los niveles, desde principiantes hasta escaladores experimentados.
+            <strong>Proveedor:</strong> <a href="https://www.grazalemaaventura.com" target="_blank">Grazalema Aventura</a>
+          </p>
+        </div>
+
+
+        <div class="deporte">
+          <img class="deporte__image deporte__image--brillo" src="./assets/images/barranquismo-1.jpg" alt="Barranquismo">
+
+          <h3 class="deporte__title deporte__title--color">Barranquismo</h3>
+
+          <p class="deporte__text deporte__text--opacidad">Las gargantas y ríos de la Sierra de Grazalema son ideales para la práctica del barranquismo...
+            Descenderás por cañones y saltarás en cascadas naturales, disfrutando de una experiencia llena de adrenalina.
+            <strong>Proveedor:</strong> <a href="https://www.horizonnature.com" target="_blank">Horizon Nature</a>
+          </p>
+        </div>
+
+
+        <div class="deporte">
+          <img class="deporte__image deporte__image--brillo" src="./assets/images/espeleo.jpg" alt="Espeleología">
+
+          <h3 class="deporte__title deporte__title--color">Espeleología</h3>
+          
+          <p class="deporte__text deporte__text--opacidad">Explora las profundidades de la tierra en la Sierra de Grazalema...
+            Lugares como la Cueva del Gato o la Cueva de la Pileta ofrecen experiencias inolvidables en sus cuevas llenas de estalactitas y estalagmitas.
+            <strong>Proveedor:</strong> <a href="https://www.barranquismoaventura.com" target="_blank">Barranquismo Aventura</a>
+          </p>
+        </div>
+
+
+        <div class="deporte">
+          <img class="deporte__image deporte__image--brillo" src="./assets/images/kayak.jpg" alt="Kayak">
+
+          <h3 class="deporte__title deporte__title--color">Kayak</h3>
+
+          <p class="deporte__text deporte__text--opacidad">Practica kayak en los embalses de la comarca, como el de Zahara-El Gastor...
+            Disfruta de las vistas a la sierra mientras navegas por sus aguas cristalinas rodeado de naturaleza.
+            <strong>Proveedor:</strong> <a href="https://www.genatur.com" target="_blank">Genatur</a>
+          </p>
+        </div>
+
+      </article>
+
+    </section>
+
+    
+    <section id="galeria" class="section">
+      <h2 class="section__title">Galería de imágenes</h2>
+
+      <div class="swiper">
+
+        <div class="swiper-wrapper" aria-live="polite">
+
+            <div class="swiper-slide">
+                <img class="swiper__img" src="./assets/images/sierra-grazalema.jpg" alt="Sierra de Grazalema">
+            </div>
+
+            <div class="swiper-slide">
+              <img class="swiper__img" src="./assets/images/pueblo-grazalema.jpg" alt="Pueblo de Grazalema">
+            </div>
+
+            <div class="swiper-slide">
+              <img class="swiper__img" src="./assets/images/pueblo-grazalema-2.jpg" alt="Grazalema">
+            </div>
+
+            <div class="swiper-slide">
+              <img class="swiper__img" src="./assets/images/cueva-pileta.jpg" alt="Cueva de la Pileta">
+            </div>
+
+            <div class="swiper-slide">
+              <img class="swiper__img" src="./assets/images/ruta-1.jpg" alt="Ruta senderismo">
+            </div>
+
+            <div class="swiper-slide">
+              <img class="swiper__img" src="./assets/images/ruta-2.jpg" alt="Ruta senderismo">
+            </div>
+
+            <div class="swiper-slide">
+              <img class="swiper__img" src="./assets/images/ruta-3.jpg" alt="Ruta senderismo">
+            </div>
+
+            <div class="swiper-slide">
+              <img class="swiper__img" src="./assets/images/ruta-4.jpg" alt="Ruta senderismo">
+            </div>
+
+            <div class="swiper-slide">
+              <img class="swiper__img" src="./assets/images/garganta verde.jpg" alt="Garganta Verde">
+            </div>
+
+            <div class="swiper-slide">
+              <img class="swiper__img" src="./assets/images/espeleo.jpg" alt="Espeleología">
+            </div>
+
+            <div class="swiper-slide">
+              <img class="swiper__img" src="./assets/images/espeleo-2.jpg" alt="Espeleología">
+            </div>
+
+            <div class="swiper-slide">
+              <img class="swiper__img" src="./assets/images/kayak.jpg" alt="Kayak">
+            </div>
+
+            <div class="swiper-slide">
+              <img class="swiper__img" src="./assets/images/escalada-1.jpg" alt="Escalada">
+            </div>
+
+            <div class="swiper-slide">
+              <img class="swiper__img" src="./assets/images/barranquismo-1.jpg" alt="Barranquismo">
+            </div>
+
+            <div class="swiper-slide">
+              <img class="swiper__img" src="./assets/images/barranquismo-2.jpg" alt="Barranquismo">
+            </div>
+
+            <div class="swiper-slide">
+              <img class="swiper__img" src="./assets/images/barranquismo-3.jpg" alt="Barranquismo">
+            </div>
+
+        </div>
+
+        <div class="swiper-button-prev" role="button" aria-label="Slide anterior" tabindex="0"></div>
+        <div class="swiper-button-next" role="button" aria-label="Slide siguiente" tabindex="0"></div>
+    
       </div>
+        
     </section>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <form>
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required>
-    
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-    
-        <label for="message">Mensaje:</label>
-        <textarea id="message" name="message" required></textarea>
-    
-        <button type="submit">Enviar</button>
+
+    <section id="contacto" class="section">
+      <h2 class="section__title">Contacto</h2>
+      <form action=”index.html”>
+        <fieldset class="form">
+          <legend class="form__legend">Información de contacto</legend>
+
+          <label class="form__label" for="name">Nombre:</label>
+          <input class="form__input" type="text" id="name" name="name" placeholder="Introduce tu nombre" title="Nombre" required>
+      
+          <label class="form__label" for="email">Email:</label>
+          <input class="form__input" type="email" id="email" name="email" placeholder="Introduce tu email" title="Correo" required>
+      
+          <label for="message" class="form__label">Mensaje:</label>
+          <textarea class="form__textarea" id="message" name="message" placeholder="Escribe tu mensaje" title="Mensaje" required></textarea>
+      
+          <button class="form__button" type="submit">Enviar</button>
+        </fieldset>
       </form>
     </section>
 
     <include src="./views/footer.html"></include>
+
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+
   </body>
 </html>

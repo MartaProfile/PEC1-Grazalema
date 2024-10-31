@@ -1,0 +1,42 @@
+// GENERALES
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $color-text;
+  font-family: $font-family;
+  background-color: lighten-color($color-primary, 50%);
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+
+p {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-text;
+
+  @media (width <= 768px) {
+    font-size: 0.9rem;
+  }
+
+  @media (width <= 480px) {
+    font-size: $font-size-small;
+  }
+}

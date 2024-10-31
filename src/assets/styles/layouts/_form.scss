@@ -1,0 +1,70 @@
+// FORMULARIO
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2rem;
+  margin-bottom: $gap;
+  border: 0.2rem solid $color-primary;
+  border-radius: 5px;
+
+  &__legend {
+    padding: 0 1rem;
+    font-size: $font-size-extramedium;
+    font-weight: bold;
+    color: $color-primary;
+
+    @media (width <= 768px) {
+      font-size: $font-size-medium;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: $color-primary;
+    
+    @media (width <= 768px) {
+      font-size: $font-size-small;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 0.1rem solid $color-primary;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+
+    &::placeholder {
+      font-size: $font-size-small;
+      opacity: 0.7;
+    }
+  }
+
+  &__button[type='submit'] {
+    justify-self: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $color-white;
+    background-color: $color-primary;
+    border: 0;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($color-primary, 10%);
+      transform: scale(1.05);
+    }
+
+    @media (width <= 480px) {
+      font-size: $font-size-small;
+    }
+  }
+}
